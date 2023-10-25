@@ -12,25 +12,51 @@
   */
 
 #include <iostream>
-
+i
 int main () {
-  int hora_actual;
-  std::cout << "Hora actual: ";
-  std::cin >> hora_actual;
-
-  std::cout << "Cantidad de horas: ";
-  int horas_a_sumar;
-  std::cin >> horas_a_sumar;
+  int cents_1;
+  int cents_2;
+  int cents_5;
+  int cents_10;
+  int cents_20;
+  int cents_50;
   
-  int hora_final = (hora_actual + horas_a_sumar) % 24; // Una buena práctica es dejar un rango del
-  //número que se puede introducir para la hora actual. 
-  if (hora_final == 1 && horas_a_sumar == 1) { 
-    std::cout << "En " << horas_a_sumar << " hora, el reloj marcará la" << hora_final << '\n';
-  }
-  if (hora_final == 1 && horas_a_sumar !=1) {
-    std::cout << "En " << horas_a_sumar << " horas, el reloj marcará la " << hora_final << '\n';
-  } else {
-      std::cout << "En " << horas_a_sumar << " horas, el reloj marcará las " << hora_final << '\n';
-    }
+  int euros_1;
+  int euros_2;
+  
+  int banknote_5;
+  int banknote_10;
+  int banknote_20;
+  int banknote_50;
+  int banknote_100;
+  int banknote_200;
+  int banknote_500;
+
+  int suma_centimos;
+  int suma_euros;
+  
+  std::cin >> suma_euros;
+  std::cin >> suma_centimos;
+  
+  banknote_500 = suma_euros % 500;
+  banknote_200 = suma_euros % 200 - suma_euros % 500;
+  banknote_100 = suma_euros % 100 - suma_euros % 200 - suma_euros % 500;
+  banknote_50 = suma_euros % 50 - suma_euros % 100 - suma_euros % 200 - suma_euros % 500;
+  banknote_20 = suma_euros % 20 - suma_euros % 50 - suma_euros % 100 - suma_euros % 200 - suma_euros % 500;
+  banknote_10 = suma_euros % 10 - suma_euros % 20 - suma_euros % 50 - suma_euros % 100 - suma_euros % 200 - suma_euros % 500;
+  banknote_5 = suma_euros % 5 - suma_euros % 10 - suma_euros % 20 - suma_euros % 50 - suma_euros % 100 - suma_euros % 200 - suma_euros % 500;
+ 
+  euros_2 = suma_euros % 2 - suma_euros % 5 - suma_euros % 10 - suma_euros % 20 - suma_euros % 50 - suma_euros % 100 - suma_euros % 200 - suma    _euros % 500;
+  euros_1 = suma_euros % 1 - suma_euros % 5 - suma_euros % 10 - suma_euros % 20 - suma_euros % 50 - suma_euros % 100 - suma_euros % 200 - suma    _euros % 500;
+
+  cents_50 = suma_centimos % 50;
+  cents_20 = suma_centimos % 20 - suma_centimos % 50;
+  cents_10 = suma_centimos % 10 - suma_centimos % 20 - suma_centimos % 50;
+  cents_5 =  suma_centimos % 5 - suma_centimos % 10 - suma_centimos % 20 - suma_centimos % 50;
+
+  cents_2 = 
+  cents_1 = 
+
+
   return 0;
 }
