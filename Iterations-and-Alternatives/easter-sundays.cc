@@ -30,20 +30,15 @@ void fecha_domingo_de_pascua(int year, int &day, int &month) {
 
   if ((numero_z + numero_e) <= 9) {
     day = 22 + numero_z + numero_e;
-    month = 4;
-  }
-
-  if ((numero_z == 29) && (numero_e == 6)) {
+    month = 3;
+  } else if ((numero_z == 29) && (numero_e == 6)) {
     day = 19;
     month = 4;
-  }
-
-  if ((numero_z == 28) && (numero_e == 6) && (numero_x > 10)) {
+  } else if ((numero_z == 28) && (numero_e == 6) && (numero_x > 10)) {
     day = 18;
     month = 4;
-  } 
-  
-  if ( day = numero_z + numero_e -9) {
+  } else {
+    day = numero_z + numero_e - 9;
     month = 4;
   }
 }
