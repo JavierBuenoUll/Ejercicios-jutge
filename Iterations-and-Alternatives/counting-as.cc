@@ -18,7 +18,7 @@ int main() {
 
   std::string frase;
   getline(std::cin, frase); 
-  int suma_a;
+  int suma_a{0};
 
   for (char character : frase) {
     if (character == 97) {
