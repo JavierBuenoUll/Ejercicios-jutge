@@ -22,7 +22,7 @@ int main() {
 
   for (char character : frase) {
     if (character == 97) {
-      suma_a++;
+      ++suma_a;
     }
   }
   
