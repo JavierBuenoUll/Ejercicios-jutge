@@ -20,6 +20,9 @@ int main() {
 
   std::cin >> numero_decimal;
  
+  if (numero_decimal == 0) {
+    std::cout << "0";
+  }
   std::string binary;
   while (numero_decimal > 0) {
     binary += (numero_decimal % 2 == 0) ? '0' : '1';
