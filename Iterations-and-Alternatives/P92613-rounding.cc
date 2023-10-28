@@ -12,27 +12,28 @@
   */
 
 #include <iostream>
-#include <string>
+#include <iomanip>
 
 int main() {
 
-  double numero_decimal;
+  long double numero_decimal;
   std::cin >> numero_decimal; 
-  int parte_entera;
-  int parte_decimal;
-  double partes_decimales = numero_decimal - static_cast<int>(numero_decimal);
+  long parte_entera;
+  long parte_decimal;
+  long double partes_decimales = numero_decimal - static_cast<int>(numero_decimal);
   if (partes_decimales == 0 ) {
-    std::cout << numero_decimal << " " << numero_decimal << " " << numero_decimal << std::endl;
-  } else { 
+    std::cout << std::fixed << std::setprecision(0) << numero_decimal << " " << numero_decimal << " " << numero_decimal << std::endl;
+  return 0;
+  } 
   parte_entera = static_cast<int>(numero_decimal);
+  if (parte_entera == static_cast<int>(numero_decimal)) {
   std::cout << parte_entera << " ";
-
   parte_decimal = parte_entera + 1;
-  std::cout << parte_decimal << " ";
-
-  } if (parte_decimal >= 5) {
-  std::cout << parte_entera + 1 << std::endl;
-  } if (parte_decimal < 5) {
+  std::cout << parte_decimal << " "; 
+  }
+  if (numero_decimal - static_cast<int>(numero_decimal) >= 0.5) {
+  std::cout <<  parte_entera + 1 << std::endl;
+  } else {
     std::cout << parte_entera << std::endl;
   }
 

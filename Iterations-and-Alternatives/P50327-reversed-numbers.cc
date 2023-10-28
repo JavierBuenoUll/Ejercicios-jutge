@@ -15,20 +15,32 @@
 
 int main() {
 
-  int First_num{};
-  int Inverso{0};
+  long long First_num{};
+  long long Inverso{0};
   
   std::cin >> First_num;
 
   if (First_num == 0) {
     std::cout << "0" << std::endl;
+  return 0;
   }
+
+  if (First_num > 0 && First_num % 10 == 0) {
+    while (First_num > 0) {
+    int digito = First_num % 10;
+    if (First_num % 10 == 0 && Inverso == 0) {
+      std::cout << 0;
+      }
+    Inverso = Inverso * 10 + digito;
+    First_num /=10;
+}
+  } else {
   while (First_num > 0) {
     int digito = First_num % 10;
     Inverso = Inverso * 10 + digito;
     First_num /= 10;
   }
-
+}
     std::cout << Inverso << std::endl;
   return(0);
 }
