@@ -24,9 +24,7 @@ bool is_valid_date(const int day, const int month, const int year) {
     }
   } else if ((year % 4 != 0 && year % 100 == 0) || (year % 400 != 0) && (month == 2 && day >= 29)) {
     return false;
-  } else { 
-    return true;
-  }
+  } 
   return true;  
 }
 
