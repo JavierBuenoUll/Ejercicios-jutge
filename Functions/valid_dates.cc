@@ -18,11 +18,14 @@ bool is_valid_date(const int day, const int month, const int year) {
   if (year < 1800 || year > 9999 || month < 1 || month > 12 || day < 1) {
     return false;
   } else if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-      daysInMonth[2] = 29;  // February has 29 days in a leap year
-  } else if (day > daysInMonth[month]) {
+    daysInMonth[2] = 29;  // February has 29 days in a leap year
+    if (day > daysInMonth[month]) {
     return false;
-  }   
-  return true;
+    }
+  } else { 
+    return true;
+  }
+  return true;  
 }
 
 int main() {
