@@ -12,20 +12,20 @@
 
 #include <iostream>
 
-int calcularMCD(int numero_1, int numero_2) {
-  while (numero_2 != 0) {
-    int temp = numero_2;
-    numero_2 = numero_1 % numero_2;
-    numero_1 = temp;
+int gcd(int a, int b) {
+  while (b != 0) {
+    int temp = b;
+    b = a % b;
+    a = temp;
   }
-  return numero_1;
+  return a;
 }
 
 int main() {
-  int numero_1, numero_2;
-  while(std::cin >> numero_1 >> numero_2) {
-    int greatest_common_divisor = calcularMCD(numero_1, numero_2);
-    std::cout << "gcd(" << numero_1 << "," << numero_2 << ")→" << greatest_common_divisor <<  std::endl;
+  int a, b;
+  while(std::cin >> a >> b) {
+    int greatest_common_divisor = gcd(a, b);
+    std::cout << "gcd(" << a << "," << b << ")→" << greatest_common_divisor <<  std::endl;
   }
   return 0;
 }
