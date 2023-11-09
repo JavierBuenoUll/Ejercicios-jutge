@@ -12,20 +12,19 @@
 
 #include <iostream>
 
-void swap2(int& a, int& b) {
-  int temp = a;
-  a = b;
-  b = temp;
-//  std::cout << a << " " << b;
+void min_max(int a, int b, int& mn, int& mx) {
+  mn = std::min(a, b);
+  mx = std::max(a, b);
+//  std::cout << mn << " " << mx << std::endl;
 }
-
+  
 /** int main (int argc, char* argv[]) {
   int numero_a;
   int numero_b;
   while (std::cin >> numero_a >> numero_b) {
-    std::cout << "swap2(" << numero_a << "," << numero_b << ")→"; 
-    swap2(numero_a, numero_b);
-    std::cout << std::endl;
+    int min = 0;
+    int max = 0;
+    min_max(numero_a, numero_b, min, max);
   }
   return 0;
 }
