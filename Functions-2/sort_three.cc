@@ -24,6 +24,14 @@ void sort3(int& a, int& b, int& c) {
      a = a;
      b = temporal_c;
      c = temp;
+  } else if (b == c && a < b && a < c) {
+    a = a;
+    b = b;
+    c = c;
+  } else if (b == c && a > b) {
+    a = b;
+    b = c;
+    c = temporal_a; 
   } else if (b < a && b < c && a < c) {
     a = b;
     b = temporal_a;
@@ -32,6 +40,14 @@ void sort3(int& a, int& b, int& c) {
     a = b;
     b = temporal_c;
     c = temporal_a;
+  } else if (a == c && b < a) {
+    a = b;
+    b = c;
+    c = temporal_a;
+  } else if (a == c & b > a) {
+    a = a;
+    b = a;
+    c = b;
   } else if (c < a && c < b && a < b) {
     a = c;
     b = temporal_a;
@@ -40,6 +56,14 @@ void sort3(int& a, int& b, int& c) {
     a = c;
     b = temp;
     c = temporal_a;
+  } else if (a == b && c < a) {
+    a = c;
+    b = b;
+    c = temporal_a;
+  } else if (a == b && c > a) {
+    a = a;
+    b = b;
+    c = c;
   }
   std::cout << a << " " << b << " " << c << " " << std::endl;
 }  
